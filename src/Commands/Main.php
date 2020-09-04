@@ -27,7 +27,6 @@ public function onCommand(CommandSender $sender, Command $cmd, string $label, ar
 
 switch($cmd->getName()){
 
-
 case "nickoff":
 if($sender instanceof Player){
 if($sender->hasPermission("nick.cmd")){
@@ -68,7 +67,7 @@ break;
 		}
 		break;
 		
-  case "clear":
+       case "clear":
 		if($sender instanceof Player){
 			if($sender->hasPermission("clear.cmd")){
 				$sender->sendMessage("§9§lServer§7»»§6 Your Inventory is now Clear");
