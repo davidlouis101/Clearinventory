@@ -1,0 +1,27 @@
+name: Command
+main: Commands\Main
+author: CrowBaldeYT
+version: 1.1.2
+api: 3.0.0
+commands:
+ nickoff:
+  description: §9§lset a Nick
+  usage: "/nickoff"
+  permission: nick.cmd
+ nick:
+  description: §9§lDisable Nick
+  usage: "/nick <text>"
+  permission: nick.cmd
+ heal:
+   description: Heal yourself
+   usage: "/heal"
+   permission: heal.cmd
+ feed:
+   description: Feed yourself
+   usage: "/feed"
+   permission: feed.cmd
+ clear:
+   description: Clear your Inventory!
+   aliases: ["clearinv", "ci"]
+   usage: "/clear"
+   permission: clear.cmd
