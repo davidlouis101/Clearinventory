@@ -31,7 +31,7 @@ switch($cmd->getName()){
 case "nickoff":
 if($sender instanceof Player){
 if($sender->hasPermission("nick.cmd")){
-              $name = $player->getName();
+              $name = $args[0];
               $sender->setDisplayName($name);
               $sender->setNameTag($name);
               $sender->sendMessage("§9§lServer§7»»§r§6 Your name has been resetet to §r§7§o " . $name . " §6!");
@@ -62,7 +62,7 @@ break;
 	case "feed":
 		if($sender instanceof Player){
 			if($sender->hasPermission("feed.cmd")){
-				$sender->sendMessage("§9§lLamaflow§7»»§6 You are have now no Hunger");
+				$sender->sendMessage("§9§lServer§7»»§6 You are have now no Hunger");
 				$sender->setFood(20);
 			}
 		}
@@ -72,7 +72,7 @@ break;
 		if($sender instanceof Player){
 			if($sender->hasPermission("clear.cmd")){
 				$sender->sendMessage("§9§lServer§7»»§6 Your Inventory is now Clear");
-        $sender->getInventory()->clearAll();
+                                $sender->getInventory()->clearAll();
 				$sender->getArmorInventory()->clearAll();
 				$sender->removeAllEffects();
 			}
