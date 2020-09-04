@@ -53,7 +53,7 @@ break;
 	case "heal":
 		if($sender instanceof Player){
 			if($sender->hasPermission("heal.cmd")){
-				$sender->sendMessage("§9§lLamaflow§7»»§6 You are now Healed");
+				$sender->sendMessage("§9§lServer§7»»§6 You are now Healed");
 				$sender->setHealth(20);
 			}
 		}
