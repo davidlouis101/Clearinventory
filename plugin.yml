@@ -25,3 +25,11 @@ commands:
    aliases: ["clearinv", "ci"]
    usage: "/clear"
    permission: clear.cmd
+ day:
+   description: Set Time to §e6000§r!
+   usage: "/day"
+   permission: day.cmd
+ night:
+   description: Set Time to §e16000§r!
+   usage: "/night"
+   permission: night.cmd
