@@ -77,6 +77,24 @@ break;
 			}
 		}
 		break;
+        
+        case "day":
+		if($sender instanceof Player){
+			if($sender->hasPermission("day.cmd")){
+				$sender->sendMessage("§9§lServer§7»»§6 Time Set to §e6000");
+                                $sender->getLevel()->setTime(6000);
+			}
+		}
+		break;
+
+       case "night":
+		if($sender instanceof Player){
+			if($sender->hasPermission("night.cmd")){
+				$sender->sendMessage("§9§lServer§7»»§6 Time Set to §e16000");
+                                $sender->getLevel()->setTime(16000);
+			}
+		}
+		break;
 
 }
 return true;
