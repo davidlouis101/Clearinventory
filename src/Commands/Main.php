@@ -30,10 +30,10 @@ switch($cmd->getName()){
 case "nickoff":
 if($sender instanceof Player){
 if($sender->hasPermission("nick.cmd")){
-              $name = $args[0];
+              $name = $sender->getName;
               $sender->setDisplayName($name);
               $sender->setNameTag($name);
-              $sender->sendMessage("§9§lServer§7»»§r§6 Your name has been resetet to §r§7§o " . $name . " §6!");
+              $sender->sendMessage("§9§lServer§7»»§r§6 Your name has been resetet Succesfuly to §r§7§o " . $name . " §6!");
 }
 }
 break;
@@ -44,7 +44,7 @@ if($sender->hasPermission("nick.cmd")){
               $nick = $args[0];
               $sender->setDisplayName($nick);
               $sender->setNameTag($nick);
-              $sender->sendMessage("§9§lServer§7»»§r§6 Your new name is now §r§7§o" . $nick . "§6!");
+              $sender->sendMessage("§9§lServer§7»»§r§6 You Succesfully set your name to §r§7§o" . $nick . "§6!");
 }
 }
 break;
@@ -52,7 +52,7 @@ break;
 	case "heal":
 		if($sender instanceof Player){
 			if($sender->hasPermission("heal.cmd")){
-				$sender->sendMessage("§9§lServer§7»»§6 You are now Healed");
+				$sender->sendMessage("§9§lServer§7»»§6 You Succesfully healed yourself!");
 				$sender->setHealth(20);
 			}
 		}
@@ -61,7 +61,7 @@ break;
 	case "feed":
 		if($sender instanceof Player){
 			if($sender->hasPermission("feed.cmd")){
-				$sender->sendMessage("§9§lServer§7»»§6 You are have now no Hunger");
+				$sender->sendMessage("§9§lServer§7»»§6 You have Succesfully Feed yourself!");
 				$sender->setFood(20);
 			}
 		}
@@ -70,7 +70,7 @@ break;
        case "clear":
 		if($sender instanceof Player){
 			if($sender->hasPermission("clear.cmd")){
-				$sender->sendMessage("§9§lServer§7»»§6 Your Inventory is now Clear");
+				$sender->sendMessage("§9§lServer§7»»§7 You Succesfully Cleared your Inventory.");
                                 $sender->getInventory()->clearAll();
 				$sender->getArmorInventory()->clearAll();
 				$sender->removeAllEffects();
@@ -81,7 +81,7 @@ break;
         case "day":
 		if($sender instanceof Player){
 			if($sender->hasPermission("day.cmd")){
-				$sender->sendMessage("§9§lServer§7»»§6 Time Set to §e6000");
+				$sender->sendMessage("§9§lServer§7»»§7 You set Succesfully the Time to §e6000");
                                 $sender->getLevel()->setTime(6000);
 			}
 		}
