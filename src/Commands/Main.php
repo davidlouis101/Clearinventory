@@ -48,7 +48,7 @@ switch($cmd->getName()){
        case "clear":
 		if($sender instanceof Player){
 			if($sender->hasPermission("clear.cmd")){
-				$sender->sendMessage("§9§lServer§7»»§7 You Succesfully Cleared your Inventory.");
+				$sender->sendMessage("§9§lServer§7»»§7 You have Succesfully Cleared your Inventory.");
                                 $sender->getInventory()->clearAll();
 				$sender->getArmorInventory()->clearAll();
 				$sender->removeAllEffects();
