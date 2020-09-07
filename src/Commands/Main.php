@@ -27,28 +27,6 @@ public function onCommand(CommandSender $sender, Command $cmd, string $label, ar
 
 switch($cmd->getName()){
 
-case "nickoff":
-if($sender instanceof Player){
-if($sender->hasPermission("nick.cmd")){
-              $name = $sender->getName;
-              $sender->setDisplayName($name);
-              $sender->setNameTag($name);
-              $sender->sendMessage("§9§lServer§7»»§r§6 Your name has been resetet Succesfuly to §r§7§o " . $name . " §6!");
-}
-}
-break;
-
-case "nick":
-if($sender instanceof Player){
-if($sender->hasPermission("nick.cmd")){
-              $nick = $args[0];
-              $sender->setDisplayName($nick);
-              $sender->setNameTag($nick);
-              $sender->sendMessage("§9§lServer§7»»§r§6 You Succesfully set your name to §r§7§o" . $nick . "§6!");
-}
-}
-break;
-
 	case "heal":
 		if($sender instanceof Player){
 			if($sender->hasPermission("heal.cmd")){
