@@ -5,11 +5,11 @@ version: 1.1.2
 api: 3.0.0
 commands:
  nickoff:
-  description: Disable nick
+  description: Disable Nick for You!
   usage: "/nickoff"
   permission: nick.cmd
  nick:
-  description: set a Nick
+  description: set a Nick for You!
   usage: "/nick <text>"
   permission: nick.cmd
  heal:
@@ -21,15 +21,15 @@ commands:
    usage: "/feed"
    permission: feed.cmd
  clear:
-   description: Clear your Inventory!
+   description: clear your inventory!
    aliases: ["clearinv", "ci"]
    usage: "/clear"
    permission: clear.cmd
  day:
-   description: Set Time to §e6000§r!
+   description: Set The Time to §e6000§r!
    usage: "/day"
    permission: day.cmd
  night:
-   description: Set Time to §e16000§r!
+   description: Set The Time to §e16000§r!
    usage: "/night"
    permission: night.cmd
