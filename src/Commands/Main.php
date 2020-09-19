@@ -17,10 +17,12 @@ class Main extends PluginBase implements Listener{
 
 public function onEnable(){
 $this->getLogger()->info(TextFormat::GREEN . "Clearinventory is now Active");
+$this->getLogger()->info(TextFormat::BLUE . "Author: Crow Balde");
 }
 
 public function onDisable(){
 $this->getLogger()->info(TextFormat::RED. "Clearinventory is now Disabled");
+$this->getLogger()->info(TextFormat::BLUE . "Author: Crow Balde");
 }
 
 public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
