@@ -5,4 +5,5 @@ branches:
 projects:
   Clearinventory:
     path: ""
+    icon: Clearinv.png
 ...
