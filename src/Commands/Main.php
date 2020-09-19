@@ -30,7 +30,7 @@ switch($cmd->getName()){
 	case "heal":
 		if($sender instanceof Player){
 			if($sender->hasPermission("heal.cmd")){
-				$sender->sendMessage("§9§lServer§7»»§6 You Succesfully healed yourself!");
+				$sender->sendMessage("§9§lServer§7»»§6 You are now healed");
 				$sender->setHealth(20);
 			}
 		}
