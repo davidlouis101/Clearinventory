@@ -1,27 +1,15 @@
-name: Command
+name: Clearinventory
 main: Commands\Main
 author: CrowBaldeYT
 version: 1.1.2
 api: 3.0.0
 commands:
- heal:
-   description: Heal yourself
-   usage: "/heal"
-   permission: heal.cmd
- feed:
-   description: Feed yourself
-   usage: "/feed"
-   permission: feed.cmd
  clear:
    description: clear your inventory!
    aliases: ["clearinv", "ci"]
    usage: "/clear"
    permission: clear.cmd
- day:
-   description: Set The Time to §e6000§r!
-   usage: "/day"
-   permission: day.cmd
- night:
-   description: Set The Time to §e16000§r!
-   usage: "/night"
-   permission: night.cmd
+
+ permission:
+  clear.cmd:
+   default: OP
