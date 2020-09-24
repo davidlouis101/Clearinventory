@@ -15,7 +15,7 @@ use pocketmine\entity\Effect;
 use pocketmine\level\sound\EndermanTeleportSound;
 use pocketmine\utils\Config;
 
-class Main extends{
+class Main extends PluginBase implements Listener{
   
 public $myConfig;
 
