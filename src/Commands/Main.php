@@ -27,7 +27,7 @@ $this->getServer()->getPluginManager()->registerEvents($this, $this);
 $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
   "Messages" => [
     "ClearMessage" => "Setup in Config.yml"
-    "PopupMessage" => "Setup in Config.yml"
+    ]
   )));
 }
 
@@ -46,14 +46,10 @@ switch($cmd->getName()){
 			  //Config
 			  $config = $this->myConfig->getAll();
 				$message = $config["Messages"] ["ClearMessage"];
-				
-				$popup = $this->myConfig->getAll();
-				$message2 = $popup["Messages"] ["PopupMessage"];
 				//sound
         $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
         //messages and Clear uses
 				$sender->sendMessage($message);
-				$sender->sendPopup($message2);
         $sender->getInventory()->clearAll();
 				$sender->getArmorInventory()->clearAll();
 				$sender->removeAllEffects();
