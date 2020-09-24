@@ -12,8 +12,7 @@ use pocketmine\Player;
 use muqsit\invmenu\{InvMenu, InvMenuHandler};
 use pocketmine\entity\EffectInstance;
 use pocketmine\entity\Effect;
-use pocketmine\network\protocol\LevelEventPacket;
-use pocketmine\network\protocol\LevelSoundEventPacket;
+use pocketmine\level\sound\EndermanTeleportSound;
 
 class Main extends PluginBase implements Listener{
 
@@ -35,8 +34,7 @@ switch($cmd->getName()){
        case "clear":
 		if($sender instanceof Player){
 			if($sender->hasPermission("clear.cmd")){
-                                $volume = mt_rand();
-			        $sender->getLevel()->broadcastLevelEvent($sender, LevelEventPacket::EVENT_SOUND_ORB, (int) $volume);
+                                $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
 				$sender->sendMessage("§a§lYou Cleared you Inventory and your Armor!");
                                 $sender->getInventory()->clearAll();
 				$sender->getArmorInventory()->clearAll();
