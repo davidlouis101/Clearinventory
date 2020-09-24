@@ -20,9 +20,6 @@ class Main extends PluginBase implements Listener{
 public $myConfig;
 
 public function onEnable(){
-$this->getLogger()->info(TextFormat::GREEN . "Clearinventory is now Active");
-$this->getLogger()->info(TextFormat::BLUE . "Author: Crow Balde");
-$this->getServer()->getPluginManager()->registerEvents($this, $this);
 
 $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
   "Messages" => [
@@ -30,12 +27,6 @@ $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAM
     ]
   )));
 }
-
-public function onDisable(){
-$this->getLogger()->info(TextFormat::RED. "Clearinventory is now Disabled");
-$this->getLogger()->info(TextFormat::BLUE . "Author: Crow Balde");
-}
-
 public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
 
 switch($cmd->getName()){
