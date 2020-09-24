@@ -24,7 +24,7 @@ $this->getLogger()->info(TextFormat::GREEN . "Clearinventory is now Active");
 $this->getLogger()->info(TextFormat::BLUE . "Author: Crow Balde");
 $this->getServer()->getPluginManager()->registerEvents($this, $this);
 
-$this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAML, array
+$this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
   "Messages" => [
     "ClearMessage" => "Setup in Config.yml"
     "PopupMessage" => "Setup in Config.yml"
