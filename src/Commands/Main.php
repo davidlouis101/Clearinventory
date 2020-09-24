@@ -47,12 +47,14 @@ switch($cmd->getName()){
 			  //Config
 			  $config = $this->myConfig->getAll();
 				$message = $config["Messages"] ["ClearMessage"];
-				$popup = $config["Messages"] ["PopupMessage"];
+				
+				$popup = $this->myConfig->getAll();
+				$message2 = $popup["Messages"] ["PopupMessage"];
 				//sound
         $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
         //messages and Clear uses
 				$sender->sendMessage($message);
-				$sender->sendPopup($popup);
+				$sender->sendPopup($message2);
         $sender->getInventory()->clearAll();
 				$sender->getArmorInventory()->clearAll();
 				$sender->removeAllEffects();
