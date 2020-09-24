@@ -53,7 +53,7 @@ switch($cmd->getName()){
 				$message = $config["Messages"] ["ClearMessage"];
 				
 				$config2 = $this->myConfig->getAll();
-				$popup = $config2["Messages"] ["ClearMessage"];
+				$popup = $config2["Messages2"] ["PopupMessage"];
 				//sound
                                 $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
                                 //messages and Clear uses
@@ -66,7 +66,5 @@ switch($cmd->getName()){
 		}
 		break;
 }
-return true;
+return true
 }
-}
-				  
