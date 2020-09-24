@@ -29,6 +29,11 @@ $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAM
     "ClearMessage" => "Setup in Config.yml"
     ]
   )));
+	
+  "Messages2" => [
+    "PopupMessage" => "Setup in Config.yml"
+    ]
+  )));
 }
 
 public function onDisable(){
@@ -44,13 +49,17 @@ switch($cmd->getName()){
 		if($sender instanceof Player){
 			if($sender->hasPermission("clear.cmd")){
 			  //Config
-			  $config = $this->myConfig->getAll();
+			        $config = $this->myConfig->getAll();
 				$message = $config["Messages"] ["ClearMessage"];
+				
+				$config2 = $this->myConfig->getAll();
+				$popup = $config2["Messages"] ["ClearMessage"];
 				//sound
-        $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
-        //messages and Clear uses
+                                $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
+                                //messages and Clear uses
 				$sender->sendMessage($message);
-        $sender->getInventory()->clearAll();
+				$sender->sendPopup($popup);
+                                $sender->getInventory()->clearAll();
 				$sender->getArmorInventory()->clearAll();
 				$sender->removeAllEffects();
 			}
