@@ -114,7 +114,7 @@ abstract class InvMenu implements MenuIds{
 					$extradata->setPosition($this->type->calculateGraphicPosition($player));
 					$this->type->sendGraphic($player, $extradata);
 					$session->setCurrentMenu($this, $callback);
-				}elseif($callback !== null){
+				}elseif($callback !== false){
 					$callback(false);
 				}
 			});
