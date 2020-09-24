@@ -29,7 +29,6 @@ $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAM
     "ClearMessage" => "Setup in Config.yml"
     ]
   )));
-}
 
 public function onDisable(){
 $this->getLogger()->info(TextFormat::RED. "Clearinventory is now Disabled");
@@ -46,6 +45,7 @@ switch($cmd->getName()){
 			        //Config
 			        $config = $this->myConfig->getAll();
 				$message = $config["Messages"] ["ClearMessage"];
+				
 				//sound
                                 $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
                                 //messages and Clear uses
