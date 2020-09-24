@@ -29,6 +29,7 @@ $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAM
     "ClearMessage" => "Setup in Config.yml"
     ]
   )));
+}
 
 public function onDisable(){
 $this->getLogger()->info(TextFormat::RED. "Clearinventory is now Disabled");
@@ -42,20 +43,21 @@ switch($cmd->getName()){
        case "clear":
 		if($sender instanceof Player){
 			if($sender->hasPermission("clear.cmd")){
-			        //Config
-			        $config = $this->myConfig->getAll();
+			  //Config
+			  $config = $this->myConfig->getAll();
 				$message = $config["Messages"] ["ClearMessage"];
-				
 				//sound
-                                $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
-                                //messages and Clear uses
+        $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
+        //messages and Clear uses
 				$sender->sendMessage($message);
-                                $sender->getInventory()->clearAll();
+        $sender->getInventory()->clearAll();
 				$sender->getArmorInventory()->clearAll();
 				$sender->removeAllEffects();
 			}
 		}
 		break;
 }
-return true
+return true;
 }
+}
+				  
