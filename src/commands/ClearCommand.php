@@ -1,6 +1,6 @@
 <?php
 
-namespace Commands;
+namespace commands;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
