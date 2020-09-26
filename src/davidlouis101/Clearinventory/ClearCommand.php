@@ -1,6 +1,6 @@
 <?php
 
-namespace davidlouis101/Clearinventory/ClearCommand;
+namespace davidlouis101/Clearinventory;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
