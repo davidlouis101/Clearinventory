@@ -20,8 +20,7 @@ class ClearCommand extends PluginBase{
 public $myConfig;
 
 public function onEnable(){
-$this->getLogger()->info(TextFormat::GREEN . "Clearinventory is now Active");
-$this->getLogger()->info(TextFormat::BLUE . "Author: Crow Balde");
+$this->getLogger()->info(TextFormat::BLUE . "Author: davidlouis101");
 $this->getServer()->getPluginManager()->registerEvents($this, $this);
 
 $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
@@ -29,11 +28,6 @@ $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAM
     "ClearMessage" => "Setup in Config.yml"
     ]
   )));
-}
-
-public function onDisable(){
-$this->getLogger()->info(TextFormat::RED. "Clearinventory is now Disabled");
-$this->getLogger()->info(TextFormat::BLUE . "Author: Crow Balde");
 }
 
 public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
