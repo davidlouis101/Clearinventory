@@ -1,11 +1,12 @@
 name: Clearinventory
-main: Clearinv\ClearCommand
+main: davidlouis101\Clearinv\ClearCommand
 author: CrowBaldeYT
 version: 1.1.7
 api: 3.0.0
+description: A Clearinventory plugin with Custom Messages
 commands:
  clear:
-   description: clear your inventory!
+   description: Clear your inventory!
    aliases: ["clearinv", "ci"]
    usage: "/clear"
    permission: clear.cmd
