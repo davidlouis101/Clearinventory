@@ -14,3 +14,4 @@ commands:
  permission:
   clear.cmd:
    default: OP
+    description: "The Permission for the Command /clearinv"
