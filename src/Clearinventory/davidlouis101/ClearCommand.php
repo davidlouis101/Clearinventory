@@ -20,7 +20,6 @@ class ClearCommand extends PluginBase{
 public $myConfig;
 
 public function onEnable(){
-$this->getLogger()->info(TextFormat::BLUE . "Author: davidlouis101");
 $this->getServer()->getPluginManager()->registerEvents($this, $this);
 
 $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
