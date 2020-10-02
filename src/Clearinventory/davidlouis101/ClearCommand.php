@@ -25,6 +25,7 @@ $this->getServer()->getPluginManager()->registerEvents($this, $this);
 $this->myConfig = (new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
   "Messages" => [
     "ClearMessage" => "Setup in Config.yml"
+    "DiscordMessage" => "Setup in Config.yml"
     ]
   )));
 }
@@ -47,6 +48,20 @@ switch($cmd->getName()){
 				$sender->getArmorInventory()->clearAll();
 				$sender->removeAllEffects();
 			}
+		}
+		break;
+
+          case "discord":
+		if($sender instanceof Player){
+			        //Config
+			        $config = $this->myConfig->getAll();
+				$message = $config["Messages"] ["ClearMessage"];
+				//sound
+                                $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
+                                //message
+                                $config = $this->myConfig->getAll();
+				$discord = $config["Messages"] ["DiscordMessage"];
+				$sender->sendMessage($message);
 		}
 		break;
 }
