@@ -61,7 +61,7 @@ switch($cmd->getName()){
                                 //message
                                 $config = $this->myConfig->getAll();
 				$discord = $config["Messages"] ["DiscordMessage"];
-				$sender->sendMessage($message);
+				$sender->sendMessage($discord);
 		}
 		break;
 }
