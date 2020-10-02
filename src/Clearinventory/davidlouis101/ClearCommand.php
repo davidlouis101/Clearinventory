@@ -60,8 +60,8 @@ switch($cmd->getName()){
                                 $sender->getlevel()->addSound(new EndermanTeleportSound($sender));
                                 //message
                                 $config = $this->myConfig->getAll();
-				$discord = $config["Messages"] ["DiscordMessage"];
-				$sender->sendMessage($discord);
+				$message = $config["Messages"] ["DiscordMessage"];
+				$sender->sendMessage($message);
 		}
 		break;
 }
