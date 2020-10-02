@@ -10,6 +10,9 @@ commands:
    aliases: ["clearinv", "ci"]
    usage: "/clear"
    permission: clear.cmd
+ discord:
+   description: Discord Server
+   aliases: ["dc", "DC"]
 
  permission:
   clear.cmd:
