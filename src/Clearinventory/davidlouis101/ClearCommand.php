@@ -37,6 +37,7 @@ switch($cmd->getName()){
        case "clear":
 		if($sender instanceof Player){
 			if($sender->hasPermission("clear.cmd")){
+                                $name = $sender->getName();
 			        //Config
 			        $config = $this->myConfig->getAll();
 				$message = $config["Messages"] ["ClearMessage"];
