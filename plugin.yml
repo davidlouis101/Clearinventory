@@ -10,3 +10,8 @@ commands:
    aliases: ["clearinv", "ci"]
    usage: "/clear"
    permission: clear.cmd
+
+   permission:
+    clear.cmd:
+     description: "Clear command Permission"
+      default: OP
