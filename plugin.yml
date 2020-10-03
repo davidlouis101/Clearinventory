@@ -13,5 +13,4 @@ commands:
 
    permission:
     clear.cmd:
-     description: "Clear command Permission"
       default: OP
