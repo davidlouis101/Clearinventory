@@ -1,5 +1,5 @@
 name: Clearinventory
-main: davidlouis101\Clearinventory\ClearCommand
+main: Clearinventory\davidlouis101\ClearCommand
 author: CrowBaldeYT
 version: 1.1.7
 api: 3.0.0
